@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>paint</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body> 
+        <div class="container">
+            <section class="tools-board">
+                <div class="row">
+                    <label  class="title">Shapes</label>
+                    <ul class="optionn">
+                        <li class="option">
+                            <img src="rectangle.svg"alt="">
+                            <span>rectangle</span>
+                            </li>
+                            <li class="option">
+                                <img src="circle.svg" alt="">
+                                <span>circle</span>
+                                
+                            </li>
+                            <li class="option">
+                                <img src="triangle.svg" alt="">
+                                <span>triangle</span>
+                                
+                            </li>
+                            <li class="option">
+                                <input type="checkbox" id="fill-color">
+                                <label for="fill-color">Fill color</label>
+                                
+                            </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <label  class="title">options</label>
+                    <ul class="optionn">
+                        <li class="option">
+                            <img src="brush.svg"alt="">
+                            <span>Brush</span>
+                            </li>
+                            <li class="option">
+                                <img src="eraser.svg" alt="">
+                                <span>Eraser</span>
+                                
+                            </li>
+                                
+                            </li>
+                            <li class="option">
+                                <input type="range" id="size-slider">
+                            
+                                
+                            </li>
+                    </ul>
+                </div>
+                <div class="row colors">
+                    <label  class="title">colors</label>
+                    <ul class="optionn">
+                        <li class="option"></li>
+                        <li class="option"></li>
+                        <li class="option"></li>
+                        <li class="option"></li>
+                        <li class="option"></li>
+                    </ul>
+                </div>
+                <div class="row buttons">
+                    <button class="clean-canvas">clean-canvas</button>
+                    <button class="save-img">save image</button>
+                </div>
+            </section>
+            <section class="drawing-board">
+                <canvas>
+                    
+                </canvas>
+            </section> 
+        </div>
+        
+        
+        <script src="app.js" async defer></script>
+    </body>
+</html>

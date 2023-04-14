@@ -1,0 +1,221 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: cornflowerblue;
+}
+.container{
+     display: flex;
+     width:100%;
+     padding:30px;
+     max-width:7px;
+     gap:25px;
+    max-width: 1050px;
+}
+
+section{
+      background:white ;
+      border-radius:5px  ;
+}
+.drawing-board{
+    flex:1;
+}
+.tools-board{
+    width:210px;
+    padding:15px 22px 0;
+}
+.tools-board .row{
+    margin-bottom:20px;
+}
+.row .option {
+    list-style:none; 
+    margin: 20px 0 0  5px;
+    
+}
+.row .option .option{
+    display:flex;
+    align-items: center;
+    margin-bottom:10px;
+    cursor: pointer;
+}
+.option:is(:hover, .active) img{
+    filter:invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+
+.option :where(span,label) 
+{
+    color:grey;
+    padding-left:10px;
+    cursor: pointer;
+} 
+.option:is(:hover, .active) :where(span,label) 
+{
+    color:rgb(65, 175, 231);
+}
+.option #fill-color{
+    height:14px;
+    width:14px;
+    cursor: pointer;
+} 
+#fill-color:checked ~label{
+     color:darkblue ;
+} 
+.option #size-slider{
+    width:100%;
+    height:5px;
+    margin-top:10px;
+} 
+.colors .optionn{
+    display: flex;
+    justify-content:space-between;
+    padding-bottom:10px;
+}
+.colors .option{
+    height:20px;
+    width:20px;
+    border-radius:5;
+    margin-top:3px;
+    position: relative;
+    
+} 
+.colors .option:nth-child(1)
+{
+     background-color: red;
+     border:2px solid white;
+}
+.colors .option:nth-child(2)
+{
+     background-color: rgb(255, 212, 20);
+     border:2px solid white;
+}
+.colors .option:nth-child(3)
+{
+     background-color:green;
+     border:2px solid white;
+}
+.colors .option:nth-child(4)
+{
+     background-color:blue;
+     border:2px solid white;
+}
+.colors .option:nth-child(5)
+{
+     background-color:black;
+     border:2px solid white;
+}
+.colors .option.selected::before{
+    position: absolute;
+    content:"";
+    top:50%;
+    left:50%;
+    height:12px;
+    width:12px;
+    background:inherit;
+    border-radius:inherit;
+    border:2px solid white;
+    transform: translate(-50%,-50%);
+}
+.colors .option:nth-child(1)
+{
+     background-color: red;
+}
+.colors .option:nth-child(2)
+{
+     background-color: rgb(255, 212, 20);
+}
+.colors .option:nth-child(3)
+{
+     background-color:green;
+}
+.colors .option:nth-child(4)
+{
+     background-color:blue;
+}
+.colors .option:nth-child(5)
+{
+      background-color:black;
+} 
+.buttons button{
+    width:100%;
+    color:white;
+    border:none;
+    outline:none;
+    padding:11px 0;
+    font-size:0.9rem;
+    margin-bottom:13px;
+    margin-top:2px;
+}
+
+.buttons{
+    justify-content:space-between;
+    justify-content: center;
+    justify-items:center;
+    padding-top:1px;
+}
+
+
+
+.buttons button {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 5px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size:1px;
+  justify-content: center;
+  line-height: 1em;
+  max-width:5%;
+  min-width:2px;
+  padding: 6px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.buttons button:active,
+.buttons button:hover {
+  outline: 0;
+}
+
+.buttons button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 50%;
+  height: 50%;
+  transition: 300ms;
+}
+
+.buttons button:hover span {
+  background: none;
+}
+
+@media (min-width:700px) {
+  .buttons button {
+    font-size: 20px;
+    min-width:150px;
+  }
+}
+
+
+.drawing-board{
+    flex:1;
+}
+.drawing-board canvas{
+    width:100%;
+    height:100%;
+}
